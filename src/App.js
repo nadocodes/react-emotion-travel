@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css, ThemeProvider } from "@emotion/react";
 import { 
+  theme,
   CardWrapper,
   ImageWrapper,
   TextWrapper,
@@ -43,6 +44,7 @@ const hotels = [
 // Apply styling to code within the `App` component's `return` statement using styled components, theming, animation and the `css` prop
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <main
       css={{
         color: "#03045e",
@@ -91,6 +93,7 @@ function App() {
         })}
       </div>
     </main>
+    </ThemeProvider>
   );
 }
 
